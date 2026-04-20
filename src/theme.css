@@ -1,0 +1,181 @@
+:root {
+  --bg-0: #f9fcff;
+  --bg-1: #f2f8ff;
+  --bg-2: #e9f2ff;
+  --bg-3: #ddeeff;
+  --text-0: #102033;
+  --text-1: #32465f;
+  --text-2: #67809b;
+  --line: rgba(80, 149, 220, 0.18);
+  --card: rgba(255, 255, 255, 0.68);
+  --card-strong: rgba(255, 255, 255, 0.82);
+  --glass: rgba(255, 255, 255, 0.48);
+  --accent-blue: #2f87f5;
+  --accent-cyan: #19b7dd;
+  --accent-teal: #18b8ac;
+  --accent-orange: #ff9a52;
+  --shadow-lg: 0 30px 72px rgba(63, 116, 177, 0.16);
+  --shadow-md: 0 16px 38px rgba(63, 116, 177, 0.12);
+  --radius-xl: 32px;
+  --radius-lg: 24px;
+  --radius-md: 18px;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(107, 191, 255, 0.18), transparent 24%),
+    radial-gradient(circle at 84% 14%, rgba(75, 217, 214, 0.14), transparent 20%),
+    linear-gradient(135deg, var(--bg-0), var(--bg-1) 44%, var(--bg-2));
+  color: var(--text-0);
+  font-family: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.reveal,
+.reveal .slides,
+.reveal .slides section {
+  background: transparent;
+}
+
+.reveal {
+  position: relative;
+  z-index: 2;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+.reveal .slides section {
+  height: 100%;
+}
+
+.deck-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.backdrop-image,
+.backdrop-grid,
+.backdrop-orb,
+.backdrop-beam,
+.backdrop-glass,
+.backdrop-vignette {
+  position: absolute;
+}
+
+.backdrop-image {
+  inset: -2%;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(239, 247, 255, 0.18)),
+    url('/assets/bg-tech-hero-light.svg') center/cover no-repeat;
+  opacity: 0.98;
+  transform: scale(1.01);
+}
+
+.backdrop-grid {
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(63, 135, 214, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63, 135, 214, 0.055) 1px, transparent 1px);
+  background-size: 54px 54px;
+  opacity: 0.36;
+  mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.92), transparent 86%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.92), transparent 86%);
+}
+
+.backdrop-orb {
+  border-radius: 50%;
+  filter: blur(56px);
+  opacity: 0.52;
+  animation: drift 18s ease-in-out infinite alternate;
+}
+
+.backdrop-orb--1 {
+  top: -8vw;
+  right: -9vw;
+  width: 30vw;
+  height: 30vw;
+  background: rgba(95, 174, 255, 0.22);
+}
+
+.backdrop-orb--2 {
+  bottom: -14vw;
+  left: -10vw;
+  width: 36vw;
+  height: 36vw;
+  background: rgba(77, 218, 210, 0.18);
+  animation-duration: 22s;
+}
+
+.backdrop-beam {
+  inset: auto;
+  width: 36vw;
+  height: 14vw;
+  border-radius: 999px;
+  filter: blur(22px);
+  opacity: 0.18;
+  transform: rotate(-16deg);
+  animation: beam-shift 20s ease-in-out infinite;
+}
+
+.backdrop-beam--1 {
+  top: 10%;
+  left: -5%;
+  background: linear-gradient(90deg, transparent, rgba(64, 185, 224, 0.26), transparent);
+}
+
+.backdrop-beam--2 {
+  right: -7%;
+  bottom: 10%;
+  background: linear-gradient(90deg, transparent, rgba(60, 138, 238, 0.2), transparent);
+  animation-delay: -7s;
+}
+
+.backdrop-glass {
+  inset: 5.2% 4.8%;
+  border-radius: 42px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.36), rgba(255, 255, 255, 0.16)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 52%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    0 24px 70px rgba(93, 145, 203, 0.12);
+  backdrop-filter: blur(12px) saturate(118%);
+}
+
+.backdrop-vignette {
+  inset: 0;
+  background:
+    radial-gradient(circle at center, transparent 50%, rgba(223, 237, 252, 0.14) 78%, rgba(223, 237, 252, 0.3) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(238, 246, 255, 0.18));
+}
+
+@keyframes drift {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(1.8vw, -1.2vw, 0) scale(1.06);
+  }
+}
+
+@keyframes beam-shift {
+  0%,
+  100% {
+    transform: rotate(-16deg) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: rotate(-13deg) translate3d(3vw, -1vw, 0);
+  }
+}

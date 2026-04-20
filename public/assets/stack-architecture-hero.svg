@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 700" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="66" y1="44" x2="942" y2="650" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9FCFF"/>
+      <stop offset=".58" stop-color="#EEF6FF"/>
+      <stop offset="1" stop-color="#E6F2FF"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".94"/>
+      <stop offset=".72" stop-color="#EEF6FF" stop-opacity=".68"/>
+      <stop offset="1" stop-color="#E1F0FF" stop-opacity=".22"/>
+    </linearGradient>
+    <linearGradient id="layerBlue" x1="284" y1="132" x2="716" y2="236" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6AB7FF"/>
+      <stop offset="1" stop-color="#7FC8FF"/>
+    </linearGradient>
+    <linearGradient id="layerTeal" x1="284" y1="246" x2="716" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58D6D0"/>
+      <stop offset="1" stop-color="#84E7E1"/>
+    </linearGradient>
+    <linearGradient id="layerOrange" x1="284" y1="360" x2="716" y2="464" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFB26D"/>
+      <stop offset="1" stop-color="#FFD199"/>
+    </linearGradient>
+    <filter id="shadow" x="210" y="94" width="580" height="484" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#75AEE2" flood-opacity=".16"/>
+    </filter>
+  </defs>
+
+  <rect width="1000" height="700" rx="36" fill="url(#bg)"/>
+  <g opacity=".18">
+    <path d="M0 520H1000" stroke="#9FCBF0"/>
+    <path d="M0 566H1000" stroke="#9FCBF0"/>
+    <path d="M0 620H1000" stroke="#9FCBF0"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M300 118H700L746 162V536H344L300 492V118Z" fill="url(#panel)"/>
+  </g>
+
+  <rect x="348" y="156" width="304" height="56" rx="18" fill="url(#layerBlue)" fill-opacity=".22"/>
+  <rect x="328" y="236" width="344" height="64" rx="20" fill="url(#layerTeal)" fill-opacity=".22"/>
+  <rect x="308" y="330" width="384" height="72" rx="22" fill="url(#layerOrange)" fill-opacity=".22"/>
+  <rect x="332" y="432" width="336" height="64" rx="20" fill="url(#layerBlue)" fill-opacity=".18"/>
+
+  <g opacity=".9">
+    <path d="M390 184H610" stroke="#82C1F8" stroke-width="2.2" stroke-opacity=".6"/>
+    <path d="M370 270H630" stroke="#5BD7D1" stroke-width="2.2" stroke-opacity=".54"/>
+    <path d="M350 368H650" stroke="#FFB56E" stroke-width="2.2" stroke-opacity=".48"/>
+    <path d="M374 466H626" stroke="#82C1F8" stroke-width="2.2" stroke-opacity=".42"/>
+  </g>
+
+  <g opacity=".86">
+    <circle cx="500" cy="198" r="12" fill="#67B6FF"/>
+    <circle cx="500" cy="270" r="14" fill="#56D6CF"/>
+    <circle cx="500" cy="366" r="16" fill="#FFB56E"/>
+    <circle cx="500" cy="466" r="14" fill="#67B6FF"/>
+    <circle cx="500" cy="270" r="58" stroke="#8EC8F8" stroke-opacity=".2"/>
+    <circle cx="500" cy="366" r="82" stroke="#A9D1F4" stroke-opacity=".16"/>
+  </g>
+
+  <g opacity=".24" stroke="#7ABAF5" stroke-width="1.8">
+    <path d="M136 148H286L338 186"/>
+    <path d="M724 186L786 148H920"/>
+    <path d="M110 332H268L320 350"/>
+    <path d="M724 350L780 332H904"/>
+    <path d="M132 526H292L344 478"/>
+    <path d="M706 478L780 526H918"/>
+  </g>
+
+  <g fill="#68B6FF">
+    <circle cx="150" cy="148" r="8"/>
+    <circle cx="920" cy="148" r="8"/>
+    <circle cx="110" cy="332" r="8"/>
+    <circle cx="904" cy="332" r="8"/>
+  </g>
+  <g fill="#56D6CF">
+    <circle cx="132" cy="526" r="8"/>
+    <circle cx="918" cy="526" r="8"/>
+  </g>
+</svg>

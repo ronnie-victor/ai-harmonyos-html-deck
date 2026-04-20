@@ -1,0 +1,23 @@
+{
+  "name": "ai-harmonyos-html-deck",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "cf:pages:login": "wrangler login",
+    "cf:pages:create": "wrangler pages project create",
+    "cf:pages:deploy": "npm run build && wrangler pages deploy dist",
+    "cf:pages:dev": "wrangler pages dev dist"
+  },
+  "dependencies": {
+    "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.83.0"
+  }
+}
