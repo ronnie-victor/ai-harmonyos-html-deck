@@ -1,3 +1,5 @@
+import { asset } from './assets.js';
+
 const overviewCards = [
   {
     title: '认知、技术关系、工程方法与项目案例四条主线',
@@ -857,7 +859,7 @@ function slideCover() {
           <img
             class="hero-figure hero-figure--cover-photo enter-fade-up"
             style="--enter-delay: 180ms;"
-            src="/assets/cover-user-hero-clean.jpg"
+            src="${asset('cover-user-hero-clean.jpg')}"
             alt=""
             aria-hidden="true"
           />
@@ -881,7 +883,7 @@ function slideOverviewCore() {
 
         <div class="overview-core-stage" data-visual="overview-core">
           <div class="overview-core-stage__image" aria-hidden="true">
-            <img src="/assets/overview-core-hero.jpg" alt="" />
+            <img src="${asset('overview-core-hero.jpg')}" alt="" />
           </div>
           <div class="overview-core-stage__wash" aria-hidden="true"></div>
 
@@ -933,7 +935,7 @@ function slideStackRelationship() {
 
           <aside class="training-side-stack">
             <article class="training-hero-card training-hero-card--image enter-fade-up" style="--enter-delay: 320ms;">
-              <img src="/assets/stack-relationship-hero.jpg" alt="" />
+              <img src="${asset('stack-relationship-hero.jpg')}" alt="" />
               <div class="training-hero-card__overlay">
                 <span class="panel-kicker">Project Mapping</span>
                 <strong>这 6 层对应从生成到验证回归的完整交付责任链。</strong>
@@ -984,7 +986,7 @@ function slideParadigmEvolution() {
 
           <aside class="training-side-stack">
             <article class="training-hero-card training-hero-card--image enter-fade-up" style="--enter-delay: 320ms;">
-              <img src="/assets/paradigm-evolution-hero.jpg" alt="" />
+              <img src="${asset('paradigm-evolution-hero.jpg')}" alt="" />
               <div class="training-hero-card__overlay">
                 <span class="panel-kicker">Practical Meaning</span>
                 <strong>这三层对应 AI 工程从“会答”走向“能交付”的三个控制点。</strong>
@@ -1020,7 +1022,7 @@ function slideModelComparison() {
 
         <div class="training-data-stage training-data-stage--comparison" data-visual="model-comparison">
           <div class="training-matrix-card training-matrix-card--image glass-card">
-            <img class="training-matrix-card__bg" src="/assets/model-comparison-table-bg.jpg" alt="" />
+            <img class="training-matrix-card__bg" src="${asset('model-comparison-table-bg.jpg')}" alt="" />
             <div class="training-matrix-card__head enter-fade-up" style="--enter-delay: 260ms;">
               <span class="panel-kicker">Fit Matrix</span>
               <p>这里强调的是使用分工：谁更适合仓库执行，谁更适合复杂重构，谁更适合视觉和文档表达。</p>
@@ -1044,7 +1046,7 @@ function slideModelComparison() {
 
           <aside class="training-side-stack">
             <article class="training-hero-card training-hero-card--image enter-fade-up" style="--enter-delay: 320ms;">
-              <img src="/assets/paradigm-systems-hero.svg" alt="" />
+              <img src="${asset('paradigm-systems-hero.svg')}" alt="" />
               <div class="training-hero-card__overlay">
                 <span class="panel-kicker">Engineering Reality</span>
                 <strong>模型负责发挥上限，Harness 负责把上限稳定下来。</strong>
@@ -1083,7 +1085,7 @@ function slideModelComparisonV2() {
 
         <div class="training-data-stage training-data-stage--comparison" data-visual="model-comparison">
           <div class="training-matrix-card training-matrix-card--image glass-card">
-            <img class="training-matrix-card__bg" src="/assets/model-comparison-table-bg.jpg" alt="" />
+            <img class="training-matrix-card__bg" src="${asset('model-comparison-table-bg.jpg')}" alt="" />
             <div class="training-matrix-card__head enter-fade-up" style="--enter-delay: 260ms;">
               <span class="panel-kicker">Fit Matrix</span>
             </div>
@@ -1106,7 +1108,7 @@ function slideModelComparisonV2() {
 
           <aside class="training-side-stack">
             <article class="training-hero-card training-hero-card--image enter-fade-up" style="--enter-delay: 320ms;">
-              <img src="/assets/model-comparison-hero.jpg" alt="" />
+              <img src="${asset('model-comparison-hero.jpg')}" alt="" />
               <div class="training-hero-card__overlay">
                 <span class="panel-kicker">工程结论</span>
                 <strong>模型能力有差异，但稳定发挥仍然依赖 Context 和 Harness 约束。</strong>
@@ -1425,7 +1427,7 @@ function slideHarnessFlow() {
 
           <aside class="training-side-stack">
             <article class="training-hero-card training-hero-card--image enter-fade-up" style="--enter-delay: 320ms;">
-              <img src="/assets/harness-system-hero.svg" alt="" />
+              <img src="${asset('harness-system-hero.svg')}" alt="" />
               <div class="training-hero-card__overlay">
                 <span class="panel-kicker">Harness View</span>
                 <strong>Harness 的目标不是替代人，而是让 AI 能在明确边界里持续推进任务。</strong>
@@ -1487,7 +1489,7 @@ function slideClosingChecklist() {
           <div class="closing-visual__frame enter-fade-up" style="--enter-delay: 220ms;">
             <img
               class="closing-visual__image"
-              src="/assets/closing-summary-hero.jpg"
+              src="${asset('closing-summary-hero.jpg')}"
               alt=""
               aria-hidden="true"
             />

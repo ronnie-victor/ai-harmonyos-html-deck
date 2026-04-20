@@ -77,7 +77,7 @@ body {
   inset: -2%;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(239, 247, 255, 0.18)),
-    url('/assets/bg-tech-hero-light.svg') center/cover no-repeat;
+    var(--asset-bg-tech-hero-light, none) center/cover no-repeat;
   opacity: 0.98;
   transform: scale(1.01);
 }

@@ -245,14 +245,14 @@
 .paradigm-hero-panel__image {
   background:
     linear-gradient(180deg, rgba(244, 249, 255, 0.72), rgba(244, 249, 255, 0.3)),
-    url('/assets/pexels-network-lines.jpg') center center / cover no-repeat;
+    var(--asset-pexels-network-lines, none) center center / cover no-repeat;
   opacity: 0.95;
 }
 
 .harness-hero-panel__image {
   background:
     linear-gradient(180deg, rgba(6, 18, 40, 0.16), rgba(6, 18, 40, 0.5)),
-    url('/assets/pexels-blue-tunnel.jpg') center 62% / cover no-repeat;
+    var(--asset-pexels-blue-tunnel, none) center 62% / cover no-repeat;
   opacity: 0.94;
 }
 
@@ -523,7 +523,7 @@
   z-index: 0;
   background:
     linear-gradient(180deg, rgba(4, 16, 34, 0.12), rgba(7, 19, 42, 0.24)),
-    url('/assets/cover-stage-backdrop.jpg') center center / cover no-repeat;
+    var(--asset-cover-stage-backdrop, none) center center / cover no-repeat;
   filter: saturate(1.04) brightness(0.94);
 }
 
@@ -539,7 +539,7 @@
   z-index: 0;
   background:
     linear-gradient(180deg, rgba(4, 14, 30, 0.28), rgba(4, 14, 30, 0.46)),
-    url('/assets/closing-summary-backdrop.jpg') center center / cover no-repeat;
+    var(--asset-closing-summary-backdrop, none) center center / cover no-repeat;
   filter: saturate(1.02) brightness(0.92);
 }
 
@@ -2513,7 +2513,7 @@
   overflow: hidden;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.06)),
-    url('/assets/harmony-tech-structure.jpg') center 32% / cover no-repeat;
+    var(--asset-harmony-tech-structure, none) center 32% / cover no-repeat;
 }
 
 .harmony-hero-panel::before {

@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
+import { asset } from './assets.js';
 import { renderSlides } from './slides.js';
 
 const indexHtml = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 const themeCss = readFileSync(new URL('./theme.css', import.meta.url), 'utf8');
+const deckCss = readFileSync(new URL('./deck.css', import.meta.url), 'utf8');
 
 describe('renderSlides', () => {
   it('renders the approved 9-slide structure', () => {
@@ -118,12 +120,12 @@ describe('renderSlides', () => {
     expect(indexHtml).toContain('AI实战 HarmonyOS 应用开发分享');
     expect(indexHtml).toContain('backdrop-image');
     expect(indexHtml).toContain('backdrop-glass');
-    expect(themeCss).toContain('bg-tech-hero-light.svg');
-    expect(html).toContain('/assets/overview-core-hero.jpg');
-    expect(html).toContain('/assets/stack-relationship-hero.jpg');
-    expect(html).toContain('/assets/model-comparison-hero.jpg');
-    expect(html).toContain('/assets/model-comparison-table-bg.jpg');
-    expect(html).toContain('/assets/closing-summary-hero.jpg');
-    expect(readFileSync(new URL('./deck.css', import.meta.url), 'utf8')).toContain('/assets/closing-summary-backdrop.jpg');
+    expect(themeCss).toContain('var(--asset-bg-tech-hero-light, none)');
+    expect(html).toContain(asset('overview-core-hero.jpg'));
+    expect(html).toContain(asset('stack-relationship-hero.jpg'));
+    expect(html).toContain(asset('model-comparison-hero.jpg'));
+    expect(html).toContain(asset('model-comparison-table-bg.jpg'));
+    expect(html).toContain(asset('closing-summary-hero.jpg'));
+    expect(deckCss).toContain('var(--asset-closing-summary-backdrop, none)');
   });
 });

@@ -2,9 +2,11 @@ import Reveal from 'reveal.js';
 import 'reveal.js/dist/reveal.css';
 import './theme.css';
 import './deck.css';
+import { applyAssetCssVars } from './assets.js';
 import { renderSlides } from './slides.js';
 
 const slidesRoot = document.getElementById('slides');
+applyAssetCssVars();
 slidesRoot.innerHTML = renderSlides();
 
 const deck = new Reveal({
